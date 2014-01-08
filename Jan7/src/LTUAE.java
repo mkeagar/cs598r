@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class LTUAE
+class LTUAE
 {
     
     public static void main(String[] args)
