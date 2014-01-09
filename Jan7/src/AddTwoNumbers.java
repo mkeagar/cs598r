@@ -17,8 +17,8 @@ class AddTwoNumbers
         two = Integer.parseInt(scan.next());
         scan.close();
         
-        String[] oneArr = new String[Math.abs(one)];
-        String[] twoArr = new String[Math.abs(two)];
+        String[] oneArr = new String[one];
+        String[] twoArr = new String[two];
         
         addList.addAll(Arrays.asList(oneArr));
         addList.addAll(Arrays.asList(twoArr));
