@@ -14,11 +14,15 @@ for i in range(numCases):
 		else:
 			number = n
 			while number is not 1:
+				if number in counts:
+					count = count + counts[number]
+					break
 				if number % 2 == 0:
 					number = number / 2
 				else:
 					number = 3 * number + 1
 				count+=1
 			counts[n] = count
-		maxCount = max(count, maxCount)
+		if count - maxCount > 0:
+			maxCount = count;
 	print str(maxCount)
