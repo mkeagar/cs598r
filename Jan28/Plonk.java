@@ -1,17 +1,20 @@
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Arrays;
+import java.io.IOException;
 
 class Plonk
 {
-	public static void main(String[] args)
+	public static void main(String[] args) throws IOException
 	{
-		Scanner scan = new Scanner(System.in);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+		// Scanner scan = new Scanner(System.in);
 		
-		int numCases = Integer.parseInt(scan.nextLine());
+		int numCases = Integer.parseInt(reader.readLine());
 		
 		for (int caseNum = 0; caseNum < numCases; caseNum++)
 		{
-			int numFriends = Integer.parseInt(scan.nextLine());
+			int numFriends = Integer.parseInt(reader.readLine());
 			
 			int[] x = new int[numFriends];
 			int[] sortedX = new int[numFriends];
@@ -20,7 +23,7 @@ class Plonk
 			
 			for (int friend = 0; friend < numFriends; friend++)
 			{
-				String line = scan.nextLine();
+				String line = reader.readLine();
 				String[] lineArr = line.split(" ");
 				x[friend] = Integer.parseInt(lineArr[0]);
 				y[friend] = Integer.parseInt(lineArr[1]);
