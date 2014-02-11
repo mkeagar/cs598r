@@ -15,7 +15,11 @@ class JavaVsCpp
 
 			if (currentWord.contains("_"))
 			{
-				for (int i = 0; i < currentWord.length(); i++)
+				if (currentWord.charAt(0) == '_' || currentWord.charAt(currentWord.length()-1) == '_')
+				{
+					error = true;
+				}
+				for (int i = 0; i < currentWord.length() && error == false; i++)
 				{
 					if (Character.isUpperCase(currentWord.charAt(i)))
 					{
