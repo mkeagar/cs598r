@@ -15,5 +15,8 @@ while True:
 		break
 
 	lineArr = line.split(",")
+	numArr = {}
+	for i in range(len(lineArr)):
+		numArr[i] = int(lineArr[i])
 
-	print str(changes(15, lineArr))
+	print str(changes(15, numArr))
