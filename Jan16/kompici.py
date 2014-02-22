@@ -8,13 +8,13 @@ for	i in range(numCases):
 	
 index = 0
 
-for i in range(numCases-1):
+for i in range(numCases):
 	current = numList[i]
-	for j in range(1,numCases-1):
-		next = numList[j]
-		for c in current:
+	for j in range(i+1, numCases):
+		compare = numList[j]
+		for c,n in current,compare:
 			oldPals = pals
-			for n in next:
+			for n in compare:
 				if int(n) ^ int(c) == 0:
 					pals = pals + 1
 					break
