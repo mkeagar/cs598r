@@ -1,3 +1,9 @@
+
+current = ""
+modified = ""
+
+
+
 import java.util.Scanner;
 
 class JavaVsCpp
@@ -28,11 +34,6 @@ class JavaVsCpp
 					}
 					else if (currentWord.charAt(i) == '_')
 					{
-						if (currentWord.charAt(i+1) == '_')
-						{
-							error = true;
-							break;
-						}
 						if (i != currentWord.length() - 1)
 						{
 							if (!Character.isUpperCase(currentWord.charAt(i+1)))
@@ -82,3 +83,4 @@ class JavaVsCpp
 		}
 	}
 }
+
